@@ -8,3 +8,12 @@ project in CSCI3251-2023 organization!
 ## Code
 
 ## Contributors
+
+{% for student in site.stu %}
+{% if student.user != "1155000000" %}
+![{{ student.name }}]({{ student.image }})
+- User: [@{{ student.user }}](https://github.com/{{ student.user }})
+- Name: {{ student.name }}
+- Content: {{ student.content }}
+{% endif %}
+{% endfor %}
